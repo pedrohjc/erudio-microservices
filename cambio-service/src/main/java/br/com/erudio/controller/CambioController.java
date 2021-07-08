@@ -33,8 +33,11 @@ public class CambioController {
         String port = environment.getProperty("local.server.port");
         
         BigDecimal conversionFactor = cambio.getConversionFactor();
+        
+        //Conversion math
         BigDecimal convertedValue = conversionFactor.multiply(amount);
         cambio.setConvertedValue(convertedValue.setScale(2,RoundingMode.CEILING));
+        
         cambio.setEnvironment(port);
         return cambio;
     }

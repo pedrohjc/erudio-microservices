@@ -7,12 +7,16 @@ import javax.persistence.Id;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 
 @Entity(name = "book")
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Book implements Serializable{
 
 	private static final long serialVersionUID = 1L;
@@ -29,7 +33,7 @@ public class Book implements Serializable{
 	private Date launchDate;
 	
 	@Column(nullable = false)
-	private double price;
+	private Double price;
 	
 	@Column(nullable = false, length = 250)
 	private String title;
@@ -46,7 +50,7 @@ public class Book implements Serializable{
 			String author,
 			String title, 
 			Date launchDate, 
-			double price, 
+			Double price, 
 			String currency,
 			String environment) {
 		Id = id;
@@ -82,11 +86,11 @@ public class Book implements Serializable{
 		this.launchDate = launchDate;
 	}
 
-	public double getPrice() {
+	public Double getPrice() {
 		return price;
 	}
 
-	public void setPrice(double price) {
+	public void setPrice(Double price) {
 		this.price = price;
 	}
 

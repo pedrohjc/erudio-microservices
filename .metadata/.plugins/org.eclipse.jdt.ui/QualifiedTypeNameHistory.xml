@@ -23,4 +23,11 @@
     <fullyQualifiedTypeName name="br.com.erudio.repository.BookRepository"/>
     <fullyQualifiedTypeName name="javax.management.RuntimeErrorException"/>
     <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
+    <fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonIgnoreProperties"/>
+    <fullyQualifiedTypeName name="org.springframework.web.client.RestTemplate"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="org.springframework.cloud.openfeign.EnableFeignClients"/>
+    <fullyQualifiedTypeName name="org.springframework.cloud.openfeign.FeignClient"/>
+    <fullyQualifiedTypeName name="br.com.erudio.response.Cambio"/>
+    <fullyQualifiedTypeName name="br.com.erudio.proxy.CambioProxy"/>
 </qualifiedTypeNameHistroy>
