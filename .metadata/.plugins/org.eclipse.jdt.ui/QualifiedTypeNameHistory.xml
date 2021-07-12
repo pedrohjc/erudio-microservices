@@ -30,4 +30,5 @@
     <fullyQualifiedTypeName name="org.springframework.cloud.openfeign.FeignClient"/>
     <fullyQualifiedTypeName name="br.com.erudio.response.Cambio"/>
     <fullyQualifiedTypeName name="br.com.erudio.proxy.CambioProxy"/>
+    <fullyQualifiedTypeName name="org.springframework.cloud.netflix.eureka.server.EnableEurekaServer"/>
 </qualifiedTypeNameHistroy>
