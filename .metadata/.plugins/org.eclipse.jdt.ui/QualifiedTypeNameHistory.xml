@@ -39,7 +39,6 @@
     <fullyQualifiedTypeName name="java.util.Optional"/>
     <fullyQualifiedTypeName name="org.springframework.cloud.gateway.route.RouteLocator"/>
     <fullyQualifiedTypeName name="org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder"/>
-    <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.client.RestTemplate"/>
     <fullyQualifiedTypeName name="org.slf4j.Logger"/>
@@ -52,4 +51,6 @@
     <fullyQualifiedTypeName name="org.springframework.cloud.gateway.route.RouteDefinitionLocator"/>
     <fullyQualifiedTypeName name="org.springframework.cloud.gateway.route.RouteDefinition"/>
     <fullyQualifiedTypeName name="org.springdoc.core.GroupedOpenApi"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.Lazy"/>
 </qualifiedTypeNameHistroy>
