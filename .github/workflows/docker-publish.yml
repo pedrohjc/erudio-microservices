@@ -45,7 +45,7 @@ jobs:
         working-directory: ./Dockerizing/05-book-service
         run: mvn clean package -Dskiptests
         
-      - name: Docker Cpmpose Build 
+      - name: Docker Compose Build 
         working-directory: ./Dockerizing
         run: docker-compose build
         
