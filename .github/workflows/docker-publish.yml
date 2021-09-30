@@ -37,19 +37,14 @@ jobs:
         working-directory: ./Dockerizing/06-api-gateway
         run: mvn spring-boot:build-image -Dskiptests
         
-      - name: Start MySQL
-        uses: samin/mysql-action@v1.3
-        with:
-          host port: 3306
-        
-      - name: Build Cambio Microservice Jar
-        working-directory: ./Dockerizing/10-cambio-service
-        run: mvn clean package -Dskiptests
-        
       - name: Build Book Microservice Jar
         working-directory: ./Dockerizing/05-book-service
         run: mvn clean package -Dskiptests
         
+      - name: Build Cambio Microservice Jar
+        working-directory: ./Dockerizing/10-cambio-service
+        run: mvn clean package -Dskiptests
+
       - name: Docker Compose Build 
         working-directory: ./Dockerizing
         run: docker-compose build
