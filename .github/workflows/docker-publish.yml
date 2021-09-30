@@ -38,7 +38,7 @@ jobs:
         run: mvn spring-boot:build-image -Dskiptests
         
       - name: Use Mysql
-        uses: samin/mysql-action@v1.3
+        run: sudo service mysql start
         
       - name: Build Cambio Microservice Jar
         working-directory: ./Dockerizing/10-cambio-service
