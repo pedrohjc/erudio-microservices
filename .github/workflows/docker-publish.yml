@@ -37,6 +37,10 @@ jobs:
         working-directory: ./Dockerizing/06-api-gateway
         run: mvn spring-boot:build-image -Dskiptests
         
+      - name: Start Mysql
+        uses: samin/mysql-action@v1
+        #run: sudo service mysql start
+        
       - name: Build Cambio Microservice Jar
         working-directory: ./Dockerizing/10-cambio-service
         run: mvn clean package -Dskiptests
