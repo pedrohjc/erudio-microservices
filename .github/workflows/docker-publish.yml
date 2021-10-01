@@ -27,11 +27,6 @@ jobs:
           java-version: '16'
           distribution: 'adopt'
           
-      - name: installing the right MySQL version
-        uses: mirromutth/mysql-action@v1
-        with:
-          mysql version: '5.7.22'
-          
       - name: Set up MySQL
         run: |
           sudo /etc/init.d/mysql start
