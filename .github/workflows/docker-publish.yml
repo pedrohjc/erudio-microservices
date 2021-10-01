@@ -32,6 +32,7 @@ jobs:
       - name: Set up MySQL
         run: |
           sudo /etc/init.d/mysql start
+          sudo /etc/init.d/mysql status
           
       - name: Build Eureka Naming Server Container Image
         working-directory: ./Dockerizing/06-naming-server
