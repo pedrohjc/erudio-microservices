@@ -7,8 +7,6 @@ name: Continous Integration with GitHub
 
 on: [push]
 
-
-
 jobs:
   build:
 
@@ -29,6 +27,11 @@ jobs:
           java-version: '16'
           distribution: 'adopt'
           
+      - name: installing the right MySQL version
+        uses: mirromutth/mysql-action@v1
+        with:
+          mysql version: '5.7.22'
+          
       - name: Set up MySQL
         run: |
           sudo /etc/init.d/mysql start
@@ -42,12 +45,12 @@ jobs:
         working-directory: ./Dockerizing/06-api-gateway
         run: mvn spring-boot:build-image -Dskiptests
         
-      - name: Build Book Microservice Jar
-        working-directory: ./Dockerizing/05-book-service
-        run: mvn clean package -Dskiptests
-        
       - name: Build Cambio Microservice Jar
         working-directory: ./Dockerizing/10-cambio-service
+        run: mvn clean package -Dskiptests
+        
+      - name: Build Book Microservice Jar
+        working-directory: ./Dockerizing/05-book-service
         run: mvn clean package -Dskiptests
 
       - name: Docker Compose Build 
